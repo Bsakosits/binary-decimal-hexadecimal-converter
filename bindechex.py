@@ -9,8 +9,6 @@ def BinDec(input):
 		magnitude*=2
 	return dec
 
-#print(BinDec(10101111))
-
 def DecBin(input):
 	bin=""
 	while input:
@@ -19,8 +17,6 @@ def DecBin(input):
 		#print("bin after execution: ", bin)
 		input=input//2
 	return bin
-
-#print(DecBin(999))
 
 def HexDec(input):
 	counter=1
@@ -46,13 +42,6 @@ def HexDec(input):
 		"F":15
 	}
 	for i in input:
-		#print("exponent is: ", inputLen-counter)
-		#print("resulting term is: ", hexDict.get(i)*(16**(inputLen-counter)))
-		#print("dec before execution: ", dec)
 		dec+=(hexDict.get(i)*(16**(inputLen-counter)))
-		#print("dec after execution: ", dec)
 		counter+=1
 	return dec
-a = HexDec("4CB0AE")
-print(a)
-print(DecBin(a))
